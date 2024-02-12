@@ -1,9 +1,7 @@
-import { Sidebar } from "@/components/sidebar";
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/modeToggle";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-import Router from "next/router";
+import Link from "next/link";
 
 export default function Home() {
-  return <div className="col-span-3 lg:col-span-4 lg:border-l"></div>;
+  return <main className="flex min-h-screen flex-col p-6">Sampling</main>;
 }

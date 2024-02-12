@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
+// import { signOut } from "@/auth";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -35,25 +36,25 @@ export function Sidebar({ className }: SidebarProps) {
           </h2>
           <div className="space-y-1">
             <Button asChild variant={pathname === "/dashboard" ? "default" : "ghost"} className="w-full justify-start">
-              <Link className="w-full justify-start flex items-center" href={"./dashboard"}>
+              <Link className="w-full justify-start flex items-center" href={"/dashboard"}>
                 <GearIcon className="mr-2 h-4 w-4" />
                 {isOpen ? <span>Dashboard</span> : ""}
               </Link>
             </Button>
-            <Button asChild variant={pathname === "/attendance" ? "default" : "ghost"} className="w-full justify-start">
-              <Link className="w-full justify-start flex items-center" href={"./attendance"}>
+            <Button asChild variant={pathname === "/dashboard/attendance" ? "default" : "ghost"} className="w-full justify-start">
+              <Link className="w-full justify-start flex items-center" href={"/dashboard/attendance"}>
                 <CheckIcon className="mr-2 h-4 w-4" />
                 {isOpen ? <span>Attendance</span> : ""}
               </Link>
             </Button>
-            <Button asChild variant={pathname === "/master" ? "default" : "ghost"} className="w-full justify-start">
-              <Link className="w-full justify-start flex items-center" href={"./master"}>
+            <Button asChild variant={pathname === "/dashboard/master" ? "default" : "ghost"} className="w-full justify-start">
+              <Link className="w-full justify-start flex items-center" href={"/dashboard/master"}>
                 <StackIcon className="mr-2 h-4 w-4" />
                 {isOpen ? <span>Master Data</span> : ""}
               </Link>
             </Button>
-            <Button asChild variant={pathname === "/settings" ? "default" : "ghost"} className="w-full justify-start">
-              <Link className="w-full justify-start flex items-center" href={"./settings"}>
+            <Button asChild variant={pathname === "/dashboard/settings" ? "default" : "ghost"} className="w-full justify-start">
+              <Link className="w-full justify-start flex items-center" href={"/dashboard/settings"}>
                 <GearIcon className="mr-2 h-4 w-4" />
                 {isOpen ? <span>Settings</span> : ""}
               </Link>
