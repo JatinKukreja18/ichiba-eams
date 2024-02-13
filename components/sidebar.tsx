@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { CheckIcon, ChevronRightIcon, DashboardIcon, GearIcon, StackIcon } from "@radix-ui/react-icons";
+import { CheckIcon, GearIcon, StackIcon } from "@radix-ui/react-icons";
 
 // import { Playlist } from "../data/playlists";
 import { Button } from "./ui/button";
