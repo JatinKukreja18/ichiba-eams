@@ -50,6 +50,8 @@ function MasterDataPage() {
 
   return (
     <div className="w-full">
+      <h1 className="text-xl font-bold mb-4">Master Data</h1>
+
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter name..."
