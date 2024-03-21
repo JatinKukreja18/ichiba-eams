@@ -29,33 +29,33 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("status")}</div>,
-  },
-  {
-    accessorKey: "email",
+    accessorKey: "name",
     header: ({ column }) => {
       return (
         <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
-          Email
+          Name
           <CaretSortIcon className="ml-2 h-4 w-4" />
         </Button>
       );
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("name")}</div>,
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    accessorKey: "joining",
+    header: "Joining",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("joining")}</div>,
+  },
+  {
+    accessorKey: "salary",
+    header: () => <div className="text-right">Salary</div>,
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
+      const salary = parseFloat(row.getValue("salary"));
 
-      // Format the amount as a dollar amount
+      // Format the salary as a dollar salary
       const formatted = new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "USD",
-      }).format(amount);
+        currency: "INR",
+      }).format(salary);
 
       return <div className="text-right font-medium">{formatted}</div>;
     },

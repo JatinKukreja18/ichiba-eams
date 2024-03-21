@@ -1,39 +1,47 @@
-export type Payment = {
+export type Employees = {
   id: string;
-  amount: number;
-  status: "pending" | "processing" | "success" | "failed";
-  email: string;
+  name: string;
+  joining: string;
+  phone?: string;
+  designation?: string;
+  email?: string;
+  salary: number;
 };
 
-export const data: Payment[] = [
+export const data: Employees[] = [
   {
     id: "m5gr84i9",
-    amount: 316,
-    status: "success",
+    name: "Baidhnath Kumar",
+    joining: "success",
     email: "ken99@yahoo.com",
+    salary: 30000,
   },
   {
     id: "3u1reuv4",
-    amount: 242,
-    status: "success",
+    name: "Anand Mishra",
+    joining: "success",
     email: "Abe45@gmail.com",
+    salary: 45000,
   },
   {
     id: "derv1ws0",
-    amount: 837,
-    status: "processing",
+    name: "Suman KTM",
+    joining: "processing",
     email: "Monserrat44@gmail.com",
+    salary: 18500,
   },
   {
     id: "5kma53ae",
-    amount: 874,
-    status: "success",
+    name: "Santosh",
+    joining: "success",
     email: "Silas22@gmail.com",
+    salary: 22000,
   },
   {
     id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
+    name: "Ajay",
+    joining: "failed",
     email: "carmella@hotmail.com",
+    salary: 11500,
   },
 ];

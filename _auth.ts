@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import { authConfig } from "./auth.config";
+import { authConfig } from "./_auth.config";
 import Credentials from "next-auth/providers/credentials";
 import { z } from "zod";
 // import { sql } from "@vercel/postgres";
